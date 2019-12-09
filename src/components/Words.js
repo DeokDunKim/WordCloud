@@ -48,7 +48,7 @@ class Words extends React.Component {
     }
 
     _post(word) {
-        return fetch('https://word-cloud-b1d4a.firebaseio.com/words.json', {
+        fetch('https://word-cloud-b1d4a.firebaseio.com/words.json', {
             method: 'POST',
             body: JSON.stringify(word)
         }).then(res => {
@@ -66,7 +66,7 @@ class Words extends React.Component {
     }
 
     _delete(id) {
-        return fetch('https://word-cloud-b1d4a.firebaseio.com/words/' + id + '.json', {
+        fetch('https://word-cloud-b1d4a.firebaseio.com/words/' + id + '.json', {
             method: 'DELETE'
         }).then(res => {
             if(res.status != 200) {
