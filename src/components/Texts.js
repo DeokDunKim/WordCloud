@@ -128,10 +128,10 @@ class Texts extends React.Component {
             });
         }
 
-        reader.readAsText(e.tartget.files[0], "EUC-KR");
+        reader.readAsText(e.target.files[0], "EUC-KR");
         this.setState({
-            fileName: e.tartget.value
-        });
+            fileName: e.target.value
+        })
     }
 
     render() {
@@ -151,7 +151,7 @@ class Texts extends React.Component {
                         <input className={classes.hidden} accept="text/plain" id="raised-button-file" type="file" file={this.state.file} value={this.state.fileName} onChange={this.handleFileChange} />
                         <label htmlFor="raised-button-file">
                             <Button variant="contained" color="primary" component="span" name="file">
-                                {this.state.fileName === "" ? ".txt 파일 선택" : this.state.fielName}
+                                {this.state.fileName === "" ? ".txt 파일 선택" : this.state.fileName}
                             </Button>
                         </label>
 
