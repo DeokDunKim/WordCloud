@@ -104,8 +104,8 @@ class Texts extends React.Component {
 
     handleSubmit = () => {
         const text = {
-            textName: this.state.textName,
-            textContent: this.state.textContent
+            textName: this.state.fileName,
+            textContent: this.state.fileContent
         }
         this.handleDialogToggle();
 
